@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<Html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan </title>
+</head>
+
+<body>
+
+    <h1>Ryan</h1>
+    <p>sou chato e gosto de jogar.</p>
+
+
+    <ul>
+        <li> jogar xadrez</li>
+        <li>jogar bola</li>
+        <li>gosto de sair</li>
+    </ul>
+
+</body>
+
+</html>
