@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craftsy - Exercício Lista 9</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <span class="logo">Craftsy</span>
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="./index.html">SMARTPHONES</a></li>
+                    <li><a href="./pages/login.html">TABLETS</a></li>
+                    <li><a href="./pages/registro.html">COMPUTADORES</a></li>
+                </ul>
+            </nav>
+            <div class="auth-links">
+                <a href="./pages/login.html">LOGIN</a> / <a href="./pages/registro.html">REGISTRAR</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="container main-layout">
+
+            <main class="product-grid">
+                <article class="product-card">
+                    <img src="./imagem/img-phone-01.jpg" alt="Smartphone">
+                    <h3>Nome do produto</h3>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="btn-ver-mais">VER MAIS</a>
+                </article>
+
+                <article class="product-card">
+                    <img src="./imagem/aside-02.jpg" alt="Smartphone">
+                    <h3>Nome do produto</h3>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="btn-ver-mais">VER MAIS</a>
+                </article>
+
+                
+
+                <div class="product-card">
+                    <img src="./imagem/img-phone-03.jpg" alt="Smartphone">
+                    <h3>Celular</h3>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="btn-ver-mais">VER MAIS</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="./imagem/img-phone-01.jpg" alt="Smartphone">
+                    <h3>Nome do produto</h3>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="btn-ver-mais">VER MAIS</a>
+                </div>
+
+                
+            </main>
+
+            <aside class="sidebar">
+                <section class="tutorials">
+                    <h2>Tutoriais</h2>
+                    <div class="tutorial-item">
+                        <img src="./imagem/aside-01.jpg" alt="Thumbnail">
+                        <p>Título do tutorial de reparo</p>
+                    </div>
+                    <div class="tutorial-item">
+                        <img src="./imagem/aside-02.jpg" alt="Thumbnail">
+                        <p>Título do tutorial de reparo</p>
+                    </div>
+                    <div class="tutorial-item">
+                        <img src="./imagem/aside-04.jpg" alt="Thumbnail">
+                        <p>Título do tutorial de reparo</p>
+                    </div>
+                    <div class="tutorial-item">
+                        <img src="./imagem/img-phone-03.jpg" alt="Thumbnail">
+                        <a>Título do tutorial de reparo</a>
+                    </div>
+                </section>
+
+                <section class="ads">
+                    <h2>Publicidade</h2>
+                    <div>
+                    <img src="./imagem/ad-01.jpg" alt="Tutoriais">
+                    </div>
+                    <div class="Publicidade">
+                 <img src="./imagem/ad-02.jpg" alt="Publicidade">
+</div>
+                    
+</footer>
+</body>
+</html>
+
+css
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    /* Cor de fundo mais próxima do azul-água da foto */
+  background-image: url("./imagem/bg-2.png");
+
+    color: #333;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* --- Cabeçalho (Navbar) --- */
+.navbar {
+    background-color: #fff;
+    /* Bordas vermelhas superior e inferior para simular o destaque dos links na foto */
+    border-top: 5px solid #cc4444; 
+  
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px 0 15px; 
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #cc4444; 
+    text-transform: uppercase;
+}
+
+.menu-principal {
+    flex-grow: 1; 
+    text-align: center;
+}
+
+.menu-principal ul {
+    list-style: none;
+    display: inline-flex;
+}
+
+.menu-principal li {
+    margin: 0 10px;
+}
+
+.menu-principal a {
+    text-decoration: none;
+    color: #444;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 0;
+    display: block;
+    border-bottom: 5px solid transparent; 
+}
+
+.menu-principal a:hover,
+.menu-principal li:first-child a { 
+    color: #cc4444;
+    border-bottom-color: #cc4444;
+}
+
+.auth-links {
+    
+    font-weight: bold;
+}
+
+.auth-links a {
+    text-decoration: none;
+    color: #444;
+}
+
+/* --- Layout Principal (Conteúdo + Sidebar) --- */
+.content-wrapper {
+    padding: 30px 0;
+}
+
+.main-layout {
+    display: flex;
+    gap: 30px; 
+}
+
+/* --- Grade de Produtos (Esquerda) --- */
+.product-grid {
+    flex: 3; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px; 
+}
+
+.product-card {
+    background-color: #fff;
+    padding: 20px;
+}
+.product-card img {
+    width: 100%;
+    /* Altura fixa para simular o layout da foto */
+    height: 150px; 
+    object-fit: cover; 
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    display: block;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.product-card .description {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 15px; 
+}
+
+.btn-ver-mais {
+    display: inline-block;
+    background-color: #cc4444; 
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 3px;
+    box-shadow: 0 2px 0 #993333; 
+    transition: all 0.1s ease;
+}
+
+.btn-ver-mais:active {
+    box-shadow: none;
+    transform: translateY(2px);
+}
+.sidebar {
+    flex: 1; 
+    min-width: 250px;
+}
+
+.sidebar h2 {
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #cc4444; 
+    color: #fff;
+    padding: 8px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-align: center; 
+}
+
+/* Seção Tutoriais */
+.tutorials {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+}
+
+.tutorial-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.tutorial-item img {
+    width: 60px; 
+    height: 40px;
+    object-fit: cover;
+    margin-right: 10px;
+    border: 1px solid #aaa;
+}
+
+.tutorial-item p {
+    font-size: 13px;
+    color: #333;
+}
+
+
+.ads {
+    padding: 0;
+}
+
+.ad-block {
+    margin-bottom: 15px;
+    padding: 20px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Bloco CodeCanyon */
+.ad-canyon {
+    background-color: #333333; 
+}
+
+.ad-canyon h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.ad-canyon p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.btn-ad {
+    display: inline-block;
+    background-color: #8cc63f; 
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+
+                  
+
+
+                  
+                  
+</body>
+</html>
