@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <header class="topo">
+        <h1>Meu Dashboard</h1>
+    </header>
+
+    
+    <main class="container">
+
+        
+        <aside class="sidebar">
+            <ul>
+                <li>Dashboard</li>
+                <li>Relatórios</li>
+                <li>Configurações</li>
+                <li>Usuários</li>
+            </ul>
+        </aside>
+
+        
+        <section class="conteudo">
+            <div class="card destaque">Card Destaque</div>
+            <div class="card">Card 1</div>
+            <div class="card">Card 2</div>
+            <div class="card">Card 3</div>
+            <div class="card">Card 4</div>
+        </section>
+
+    </main>
+
+    
+    <footer class="rodape">
+        <p>© 2025 - Meu Dashboard Flexbox</p>
+    </footer>
+
+</body>
+</html>
+
+css
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho */
+.topo {
+    background: #0366d6;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Layout principal */
+.container {
+    display: flex;
+    min-height: 80vh;
+}
+
+/* Barra lateral */
+.sidebar {
+    background: #222;
+    color: white;
+    padding: 15px;
+
+    /* Não cresce, não encolhe, largura fixa */
+    flex: 0 0 200px;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+    list-style: none;
+}
+
+/* Conteúdo principal */
+.conteudo {
+    flex-grow: 1; /* Ocupa todo o restante */
+    padding: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Cards */
+.card {
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+
+    /* Tamanho inicial */
+    flex-basis: 200px;
+
+    /* Pode crescer e encolher */
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+/* Card de destaque */
+.destaque {
+    background: #ffe08a;
+
+    flex-grow: 2;      /* Cresce mais que os outros */
+    flex-basis: 300px; /* Começa maior */
+    order: -1;         /* Aparece primeiro */
+    align-self: center; /* Alinhamento diferente */
+}
+
+/* Rodapé */
+.rodape {
+    background: #0366d6;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+</html>
